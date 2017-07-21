@@ -1,29 +1,26 @@
-# truffle-init-webpack
+## Demo app using Ethereum / Truffle / IPFS 
+User can upload a photo, store it in IPFS and receive some funds if the content gets likes.  
+The contract is used to manage users and hash content.
+
+### truffle-init-webpack
 Example webpack project with Truffle. Includes contracts, migrations, tests, user interface and webpack build pipeline.
 
 ## Usage
 
-To initialize a project with this example, run `truffle init webpack` inside an empty directory.
+`` npm install ``
 
-## Building and the frontend
+Start testrpc: 
 
-1. First run `truffle compile`, then run `truffle migrate` to deploy the contracts onto your network of choice (default "development").
-1. Then run `npm run dev` to build the app and serve it on http://localhost:8080
+`` testrpc ``
 
-## Possible upgrades
+Compile the contracts:
 
-* Use the webpack hotloader to sense when contracts or javascript have been recompiled and rebuild the application. Contributions welcome!
+`` truffle compile ``
 
-## Common Errors
+Migrate contracts to the test blockchain:
 
-* **Error: Can't resolve '../build/contracts/MetaCoin.json'**
+`` truffle migrate ``
 
-This means you haven't compiled or migrated your contracts yet. Run `truffle compile` and `truffle migrate` first.
+Start the app:
 
-Full error:
-
-```
-ERROR in ./app/main.js
-Module not found: Error: Can't resolve '../build/contracts/MetaCoin.json' in '/Users/tim/Documents/workspace/Consensys/test3/app'
- @ ./app/main.js 11:16-59
-```
+`` npm run dev ``
