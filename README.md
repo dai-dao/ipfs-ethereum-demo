@@ -27,8 +27,11 @@ Start the app:
 
 ## Issues
 
-1. Even after updating the balance in the contract, a call to `` getBalance `` still returns the same result.  
-This weird issue doesn't happen in the test, which makes it even weirder.
+1. Since this is just a demo app, reviewers are encouraged to open the log console on the web page to really see what's . 
+going on under the hood.
 
-2. This project showcases just the basic functionality that I was able to learn from Truffle and IPFS. Currently  
+2. After updating the balance in the contract through ``award()``, a call to ``getBalance`` still returns the same result.  
+The test passes however which makes this confusing to debug.
+
+3. This project showcases just the basic functionality that I was able to learn from Truffle and IPFS. Currently  
 taking an online course on Ethereum development and will be able to improve upon it.
