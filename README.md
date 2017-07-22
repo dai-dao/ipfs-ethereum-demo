@@ -27,7 +27,7 @@ Start the app:
 
 ## Issues
 
-1. Since this is just a demo app, reviewers are encouraged to open the log console on the web page to really see what's . 
+1. Since this is just a demo app, reviewers are encouraged to open the log console on the web page to really see what's  
 going on under the hood.
 
 2. After updating the balance in the contract through ``award()``, a call to ``getBalance`` still returns the same result.  
