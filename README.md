@@ -1,7 +1,7 @@
 ## Demo app using Ethereum / Truffle / IPFS 
 This demo app has been upgraded  to a fully functional app. It's a game in which
 user has to mimic an emoji to earn points. Each earned points is equivalent to 
-some amount of token and the user balance is updated accordingly. 
+some amount of token and the user balance is updated in the **Solidity contract** accordingly. 
 
 IPFS is used to store the facial expressions that helps the user earn the points, and can be
 viewed by clicking the "Stop" button. 
@@ -27,7 +27,7 @@ Start the app:
 
 `` npm run dev ``
 
-** Users are encouraged NOT to run with MetaMask, due to it constantly asking to validate a transaction. **
+**Users are encouraged NOT to run with MetaMask, due to it constantly asking to validate a transaction.**
 
 ## Issues
 
