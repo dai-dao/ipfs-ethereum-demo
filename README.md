@@ -1,6 +1,14 @@
 ## Demo app using Ethereum / Truffle / IPFS 
-User can upload a photo, store it in IPFS and receive some funds if the content gets likes.  
-The contract is used to manage users and the hash of the content.
+This demo app has been upgraded  to a fully functional app. It's a game in which
+user has to mimic an emoji to earn points. Each earned points is equivalent to 
+some amount of token and the user balance is updated accordingly. 
+
+IPFS is used to store the facial expressions that helps the user earn the points, and can be
+viewed by clicking the "Stop" button. 
+
+![Image 1](results/resize_1.png)
+![Image 2](results/resize_2.png)
+
 
 ### truffle-init-webpack
 Example webpack project with Truffle. Includes contracts, migrations, tests, user interface and webpack build pipeline.
@@ -11,26 +19,20 @@ Example webpack project with Truffle. Includes contracts, migrations, tests, use
 
 Start testrpc: 
 
-`` testrpc ``
+``testrpc``
 
-Compile the contracts:
-
-`` truffle compile ``
-
-Migrate contracts to the test blockchain:
-
-`` truffle migrate ``
+Compile the contracts with ``truffle compile`` and migrate to the blockchain ``truffle migrate``
 
 Start the app:
 
 `` npm run dev ``
 
+** Users are encouraged NOT to run with MetaMask, due to it constantly asking to validate a transaction. **
+
 ## Issues
 
-1. Since this is just a demo app, reviewers are encouraged to open the log console on the web page to really see what's going on under the hood.
+Tests fully updated, every test cases pass. 
 
-2. After updating the balance in the contract through ``award()``, a call to ``getBalance`` still returns the same result.  
-The test passes however which makes this confusing to debug.
+## Next step
 
-3. This project showcases just the basic functionality that I was able to learn from Truffle and IPFS. Currently  
-taking an online course on Ethereum development and will be able to improve upon it.
+Build a blockchain-based gambling app. Can't wait :)
