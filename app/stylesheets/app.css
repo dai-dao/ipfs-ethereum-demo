@@ -1,52 +1,36 @@
-body {
-  margin-left: 25%;
-  margin-right: 25%;
-  margin-top: 10%;
-  font-family: "Open Sans", sans-serif;
+body { margin:0 auto; }
+
+div.left {
+  border-right: 1px solid #ccc;
 }
 
-label {
-  display: inline-block;
-  width: 100px;
+div.top {
+  border-bottom: 1px solid #ccc;
 }
 
-input {
-  width: 500px;
-  padding: 5px;
-  font-size: 16px;
+#camera { width: 640px; height: 480px; padding: 0; }
+
+#game { height: 120px; }
+
+#target {
+  height: 80px;
+  font-family: Arial, sans-serif; font-size: 48pt;
 }
 
-button {
-  font-size: 16px;
-  padding: 5px;
-}
-
-h1, h2 {
-  display: inline-block;
-  vertical-align: middle;
-  margin-top: 0px;
-  margin-bottom: 10px;
-}
-
-h2 {
-  color: #AAA;
-  font-size: 32px;
-}
-
-h3 {
-  font-weight: normal;
-  color: #AAA;
-  font-size: 24px;
-}
-
-.black {
-  color: black;
+#score {
+  font-family: Courier, monospace; font-size: 12pt; font-weight: bold;
 }
 
 #balance {
-  color: black;
+  font-family: Courier, monospace; font-size: 12pt; font-weight: bold;
 }
 
-.hint {
-  color: #666;
+#results {
+  min-height: 160px;
+  font-size: 10pt;
+  word-wrap: break-word;
+}
+
+#logs {
+  font-size: 10pt;
 }

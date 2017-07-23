@@ -1,25 +1,33 @@
 pragma solidity ^0.4.4;
 
 contract Like {
-    address user;
-    mapping(address => uint256) balanceOf;
-    bytes32[5] public user_content_hash;
+    event Awarded(uint amount);
+
+    struct User {
+        uint balance;
+        mapping(uint => string) content;
+    }
+    mapping(address => User) public userBase;
 
     function Like() public {
-        user = msg.sender; 
-        balanceOf[user] = 1000; /* Initial coin amount in the user wallet */
+        userBase[msg.sender] = User(1000); 
     }
 
-    function store_content(uint id, bytes32 hash) {
-        user_content_hash[id] = hash; /* Store the content hash in the contract */
+    function store_content(uint score, string hash) {
+        userBase[msg.sender].content[score] = hash; // Store the hash content
+    }
+
+    function retrieve(uint score) public returns(string) {
+        return userBase[msg.sender].content[score];
     }
 
     function award() {
-        balanceOf[user] += 10;  
+        userBase[msg.sender].balance += 100;
+        Awarded(100); // Fire this event to let the user know they've been awarded coins
     }
 
-    function getBalance() public returns (uint256) {
-        return balanceOf[user];
+    function getBalance() public returns (uint) {
+        return userBase[msg.sender].balance;
     }
 }
 
