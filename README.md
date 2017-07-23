@@ -6,6 +6,8 @@ some amount of token and the user balance is updated in the **Solidity contract*
 IPFS is used to store the facial expressions that helps the user earn the points, and can be
 viewed by clicking the "Stop" button. 
 
+***This is the result of combining my previous project on Facial Recognition with what I recently learned with IPFS / Ethereum.***
+
 ![Image 1](results/resize_1.png)
 ![Image 2](results/resize_2.png)
 
